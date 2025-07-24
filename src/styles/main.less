@@ -1,0 +1,64 @@
+@import "hero";
+@import "shows";
+@import "plans";
+@corDeFundo: #040714;
+@corTextoPrincipal:silver;
+@corDeTextoSecundario:#f9f9f9;
+@corDoButton:#6421ff;
+
+
+.text(@fontsize: 16px){
+    font-size: @fontsize;
+    line-height: (@fontsize + 10px);
+    color: @corTextoPrincipal;
+}
+.title(@fontsize:40px){
+    .text(@fontsize);
+    color: @corDeTextoSecundario;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+   // background-color: yellow;
+
+}
+body {
+    background-color: @corDeFundo;
+}
+
+.text--big {
+    .text(18px);
+}
+
+.text {
+    .text();
+}
+
+.text--small {
+    .text(12px);
+}
+
+///////////////
+
+.title--big {
+    .title(44px);
+}
+
+.title {
+    .title();
+}
+
+.title--small {
+    .title(28px);
+}
+
+/////////
+
+.link--text {
+    .text(18px);
+    color: @corDeTextoSecundario;
+    text-decoration: underline;
+}
