@@ -48,6 +48,7 @@
 }
 .shows {
   padding: 2vw 5.6vw;
+  min-height: 50vw;
 }
 .shows__list {
   display: none;
@@ -83,22 +84,56 @@
 .plans {
   padding: 5.6vw;
 }
+.plans p {
+  text-align: center;
+  margin-top: 5vw;
+}
 .plans h2 {
   text-align: center;
 }
 .plans__list {
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
 }
 .plans__list__item {
   text-align: center;
   padding: 60px 44px 44px ;
+  max-width: 380px;
+  width: 100%;
+}
+.plans__list__item:nth-child(2) {
+  background-image: url(/dist/images/fundo_combo_plus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .plans__list__item strong {
   display: block;
+  margin-top: 24px;
 }
-.plans p {
-  text-align: center;
+.plans__list__item img {
+  height: 83px;
+}
+.watch {
+  padding: 5.6vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.watch--full {
+  display: block;
+}
+.watch--full img {
+  width: 100%;
+}
+.watch img {
+  max-width: 100%;
+}
+.watch__link {
+  padding: 0 2vw;
+}
+.watch__link h2 {
+  padding-bottom: 24px;
 }
 * {
   margin: 0;
@@ -148,4 +183,19 @@ body {
   color: silver;
   color: #f9f9f9;
   text-decoration: underline;
+}
+.button {
+  display: block;
+  width: 100%;
+  height: 60px;
+  font-size: 18px;
+  color: #f9f9f9;
+  background-color: #6421ff;
+  border-radius: 4px;
+  margin-top: 2vw;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #7a4be9;
 }

@@ -1,6 +1,7 @@
 @import "hero";
 @import "shows";
 @import "plans";
+@import 'watch';
 @corDeFundo: #040714;
 @corTextoPrincipal:silver;
 @corDeTextoSecundario:#f9f9f9;
@@ -61,4 +62,19 @@ body {
     .text(18px);
     color: @corDeTextoSecundario;
     text-decoration: underline;
+}
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color:@corDeTextoSecundario;
+    background-color: @corDoButton;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    cursor: pointer;
+    &:hover {
+        background-color: #7a4be9;
+    }
 }
