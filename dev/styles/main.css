@@ -122,9 +122,20 @@
 }
 .watch--full {
   display: block;
+  position: relative;
 }
 .watch--full img {
   width: 100%;
+}
+.watch--full-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 50%;
+  width: calc(50% - 5.6vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center ;
 }
 .watch img {
   max-width: 100%;
@@ -134,6 +145,52 @@
 }
 .watch__link h2 {
   padding-bottom: 24px;
+}
+.available-devices {
+  padding: 5.6vw;
+}
+.available-devices h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.available-devices__list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.available-devices__list__item {
+  text-align: center;
+}
+.available-devices__list__item h4 {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+.available-devices__list__item li {
+  list-style: none;
+}
+.available-devices__list__item img {
+  max-width: 100%;
+}
+.faq {
+  padding: 5.6vw;
+}
+.faq h2 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.faq__questions__item {
+  background-color: #13151d;
+  margin-bottom: 16px;
+}
+.faq__questions__item__question {
+  color: #fff;
+  font-size: 20px;
+  padding: 24px;
+  display: block;
+  cursor: pointer;
+}
+.faq__questions__item__answer {
+  padding: 24px;
 }
 * {
   margin: 0;
