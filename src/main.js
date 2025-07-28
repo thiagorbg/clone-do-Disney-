@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('[data-tab-button]');
+    const questions = document.querySelectorAll('[data-faq-question]');//aqui eu chamo o atributo no html dos acorddions
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(evento) {
@@ -13,7 +14,24 @@ document.addEventListener('DOMContentLoaded', function () {
             evento.target.classList.add('shows__tabs__button--is-active');
         });
     }
+
+    for (let i = 0; i < questions.length; i++){//acordions
+        questions[i].addEventListener('click', abreOuFechaResposta);
+    }
 });
+
+function abreOuFechaResposta (elemento){//acordons
+    const classe ='faq__questions__item--is-open';
+    const elementoPai = elemento.target.parentNode;
+
+
+    elementoPai.classList.toggle(classe)
+}
+
+
+
+
+
 function removeBotãoAtivo(){
     const buttons = document.querySelectorAll('[data-tab-button]');
     for (let i = 0; i < buttons.length; i++) {
