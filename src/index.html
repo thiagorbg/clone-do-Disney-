@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="/dev/styles/main.css">
 </head>
 <body>
+    <header class="header header--is-hidden">
+        <div class="header__container">
+            <h1 >
+            <img class="header__logo" src="/dist/images/disneyplus.svg" alt="disney+">
+            </h1>
+            <ul class="header__links">
+                <li class="header__links__item ">
+                    <a href="" class="button button--secondary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
     <section class="hero">
         <div class="hero__content">
             <h1 class="hero__content__branding">
@@ -247,33 +262,50 @@
                     A resposta da pergunta
                 </div>
             </li>
+            <li class="faq__questions__item">
+                <div class="faq__questions__item__question" data-faq-question>
+                    pergunta?
+                </div>
+                <div class="faq__questions__item__answer text--big">
+                    A resposta da pergunta
+                </div>
+            </li>
         </ul>
     </section>
     <section class="footer">
         <div class="footer__container">
             <img class="footer__logo" src="/dist/images/disneyplus.svg" alt="Disney+">
             <ul class="footer__links">
-                <li class="links__item">
-                    <a href="#" class="text--small">Termos e condiçoes </a>
-                </li> 
-                <li class="links__item">
-                    <a href="#" class="text--small">Política e privacidade </a>
+                <li class="footer__links__item">
+                    <div class="language-selector">
+                        <img src="/dist/images/icones/globe.svg" alt="Globo do mundo">
+                        <select>
+                            <option >English</option>
+                            <option selected>Portugues</option>
+                        </select>
+                    </div>
                 </li>
-                <li class="links__item">
-                    <a href="#" class="text--small">Proteção de dados</a>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Termos e condiçoes de Uso </a>
                 </li> 
-                <li class="links__item">
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Política e privacidade e respeito  </a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Proteção de dados no Brasil</a>
+                </li> 
+                <li class="footer__links__item">
                     <a href="#" class="text--small">Anúcios personaizados</a>
                 </li>
-                <li class="links__item">
+                <li class="footer__links__item">
                     <a href="#" class="text--small">
                         Dispositivos compatíveis
                     </a>
                 </li>
-                <li class="links__item">
+                <li class="footer__links__item">
                     <a href="#" class="text--small">Ajuda</a>
                 </li>
-                <li class="links__item">
+                <li class="footer__links__item">
                     <a href="#" class="text--small">Sobre o Disney+</a>
                 </li>
 

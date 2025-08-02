@@ -3,6 +3,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]');//aqui eu chamo o atributo no html dos acorddions
 
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function () {
+        const posicaoAtul = this.window.scrollY;
+
+        if ( posicaoAtul < alturaHero) {
+            console.log("ocultar os elementos")
+        }
+    })
+
+    // seçao de atraçoes , programação das abas 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(evento) {
             const abaAlvo = evento.currentTarget.dataset.tabButton;
@@ -15,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+    // seção FAQ, accordion
     for (let i = 0; i < questions.length; i++){//acordions
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
