@@ -39,28 +39,52 @@ body {
 
 .text--big {
     .text(18px);
+
+    @media (max-width: 768px){
+        .text(15px);
+    }
 }
 
 .text {
     .text();
+
+    @media (max-width: 768px){
+        .text(14px);
+    }
 }
 
 .text--small {
     .text(12px);
+
+    @media (max-width: 768px){
+        .text(11px);
+    }
 }
 
 ///////////////
 
 .title--big {
     .title(44px);
+
+    @media (max-width: 768px){
+        .title(26px);
+    }
 }
 
 .title {
     .title();
+
+    @media (max-width: 768px){
+        .title(24px);
+    }
 }
 
 .title--small {
     .title(28px);
+
+    @media (max-width: 768px){
+        .title(22px);
+    }
 }
 
 /////////
@@ -85,6 +109,10 @@ body {
     padding: 8px 14px;
     letter-spacing: 1px;
     border: 1px solid @corDoButton;
+
+    @media (max-width: 768px){
+        justify-content: center;
+    }
     &:hover {
         background-color: lighten(@corDoButton,3%);
     }

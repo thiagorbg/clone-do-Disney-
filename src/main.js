@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const posicaoAtul = this.window.scrollY;
 
         if ( posicaoAtul < alturaHero) {
-            console.log("ocultar os elementos")
+            ocultarElementosDOHerader();
+            
+        }else{
+            exibeElementosDoHeader();
         }
     })
 
@@ -33,6 +36,22 @@ document.addEventListener('DOMContentLoaded', function () {
         questions[i].addEventListener('click', abreOuFechaResposta);
     }
 });
+
+
+
+function ocultarElementosDOHerader(){
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden')
+}
+function exibeElementosDoHeader(){
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden')
+}
+
+
+
+
+
 
 function abreOuFechaResposta (elemento){//acordons
     const classe ='faq__questions__item--is-open';
