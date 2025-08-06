@@ -149,6 +149,10 @@
 }
 .plans__list .button {
   margin-top: 24px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .plans__list__item {
   text-align: center;
@@ -506,6 +510,7 @@ body {
   padding: 8px 14px;
   letter-spacing: 1px;
   border: 1px solid #6421ff;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .button {

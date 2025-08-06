@@ -37,28 +37,23 @@ module.exports = function(grunt) {
             files:['src/styles/*.less'],
             tasks:['less:development']
         },
-        copy: {
-            html: {
-                files: [
-            {
-                expand: true,
-                cwd: 'src/',              // a partir da raiz do projeto
-                src: ['index.html'],   // ajusta se tiver mais HTMLs
-                dest: 'dist/'
+        uglify : {
+            build: {
+                files: {
+                    'dist/js/main.min.js' : ['src/main.js']
+                }
             }
-        ]
         }
-    }
     });
 
     // Carregar plugins
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Tarefas nomeadas para ficar fácil de usar
     
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production', 'imagemin', 'copy:html']);
+    grunt.registerTask('build', ['less:production', 'uglify']);
 };
